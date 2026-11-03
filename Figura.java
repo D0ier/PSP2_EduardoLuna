@@ -83,6 +83,9 @@ public class Figura implements Figuras{
 
     @Override
     public double calcularArea(){
+        /*Es parecido al anterior método, el de detectarFigura, donde solo se verifica las igualdades de los datos y así determinar a qué figura corresponden sus 
+        dimensiones, lo que hace extenso a este es que no devuelve una simple cadena, sino las fórmulas matemáticas de las áreas respectivas de cada figura, con
+        comando de matemáticas como Math.pow para exponentes*/
          if (numeroA <= 0 || numeroB < 0 || numeroC < 0) {
             System.out.println("Determine una figura en la opción 1...");
             return 0.0;
