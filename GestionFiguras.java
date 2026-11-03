@@ -12,7 +12,7 @@ public class GestionFiguras {
          System.setOut(new PrintStream(System.out, true, "UTF-8"));
          leer = new Scanner(System.in, "UTF-8");
         } catch (UnsupportedEncodingException ex) {}
-
+        //Opción para el menú
         int opcion;
         
         do {
@@ -51,6 +51,10 @@ public class GestionFiguras {
             determinarFigura();
         }
 
+        /*Este if sirve para revisar si mandar un mensaje regular de error o uno en donde se referencia a una figura anterior que si era válida. Para esto 
+        se usa una validación en la que se comprueba que la variable tipoFigura de la clase Figura no tenga datos, así sabe si pedir una figura valida o no. 
+        Pero después usa otra validación en donde verifica que la figura anterior haya sido una válida, mediante una variable de tipo bool que a la cual se 
+        le asigna el valor en el método determinarFigura*/
         if (figuraActual.getTipoFigura() == null) {
             if (figuraValida) {
                 System.out.println("No se conservan los datos de la figura anterior. Se solicita determinar una figura");
